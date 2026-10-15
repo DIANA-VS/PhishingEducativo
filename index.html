@@ -42,24 +42,66 @@
 </head>
 <body>
   <div class="panel">
-    <h1>⚠️ ¡Alerta de seguridad!</h1>
-    <h2>Simulación de una amenaza informática</h2>
-    <p>Esta pantalla representa una alerta que podría aparecer
-    durante un intento de engaño digital.</p>
-    <p><strong>Atención:</strong> no se ha detectado ni ejecutado
-    ningún virus. Esta es una demostración ficticia.</p>
+   
+<div class="panel">
+  <div style="font-size:50px">🛡️</div>
+  <h1>ALERTA DE SEGURIDAD</h1>
+  <h2>Simulación de amenaza informática</h2>
 
-    <button onclick="mostrarExplicacion()">
-      Descubrir qué está pasando
-    </button>
+  <p>Se muestra una alerta visual de demostración.
+  No se ha detectado ni ejecutado ningún virus.</p>
 
-    <div id="explicacion">
-      <h2>✅ ¡Era una simulación educativa!</h2>
-      <p>Has visto un ejemplo de cómo una alerta alarmante
-      puede provocar miedo o urgencia.</p>
-      <p>Antes de abrir enlaces, comprueba quién envía el mensaje,
-      revisa el destino del enlace y verifica las solicitudes
-      por un canal oficial.</p>
+  <div style="
+    background:#e5e7eb;
+    border-radius:20px;
+    height:14px;
+    overflow:hidden;
+    margin:25px 0;">
+    <div id="barra" style="
+      background:#dc2626;
+      width:0;
+      height:100%;
+      transition:width 1.5s ease;">
+    </div>
+  </div>
+
+  <p id="estado">Preparando animación de demostración...</p>
+
+  <button onclick="mostrarExplicacion()">
+    Ver explicación educativa
+  </button>
+
+  <div id="explicacion"
+       style="display:none; margin-top:25px;
+       padding:20px; background:#e8f5e9;
+       border-radius:12px;">
+    <h2>¡Era una simulación!</h2>
+    <p>No había ningún virus. Esta actividad muestra
+    cómo una alerta puede provocar miedo o urgencia.</p>
+    <p>Antes de abrir enlaces, verifica el remitente,
+    comprueba el destino y consulta a la organización
+    por un canal oficial.</p>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const barra = document.getElementById("barra");
+    const estado = document.getElementById("estado");
+
+    requestAnimationFrame(() => {
+      barra.style.width = "72%";
+    });
+
+    estado.textContent =
+      "Animación visual · No se realiza ningún análisis";
+  });
+
+  function mostrarExplicacion() {
+    document.getElementById("explicacion").style.display = "block";
+  }
+</script>
+
     </div>
   </div>
 
