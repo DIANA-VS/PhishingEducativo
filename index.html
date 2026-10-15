@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de seguridad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f0;
+      text-align: center;
+      padding: 40px 20px;
+      color: #292929;
+    }
+    .panel {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border: 2px solid #dc2626;
+      border-radius: 16px;
+    }
+    h1 { color: #c62828; }
+    button {
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 8px;
+      background: #1769aa;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #explicacion {
+      display: none;
+      background: #e8f5e9;
+      padding: 18px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>⚠️ ¡Alerta de seguridad!</h1>
+    <h2>Simulación de una amenaza informática</h2>
+    <p>Esta pantalla representa una alerta que podría aparecer
+    durante un intento de engaño digital.</p>
+    <p><strong>Atención:</strong> no se ha detectado ni ejecutado
+    ningún virus. Esta es una demostración ficticia.</p>
+
+    <button onclick="mostrarExplicacion()">
+      Descubrir qué está pasando
+    </button>
+
+    <div id="explicacion">
+      <h2>✅ ¡Era una simulación educativa!</h2>
+      <p>Has visto un ejemplo de cómo una alerta alarmante
+      puede provocar miedo o urgencia.</p>
+      <p>Antes de abrir enlaces, comprueba quién envía el mensaje,
+      revisa el destino del enlace y verifica las solicitudes
+      por un canal oficial.</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarExplicacion() {
+      document.getElementById("explicacion").style.display = "block";
+    }
+  </script>
+</body>
+</html>
